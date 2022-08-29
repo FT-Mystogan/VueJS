@@ -8,6 +8,9 @@
       </header>
       <header>
         <div>
+          <div>
+            <p>Job is Completed</p>
+          </div>
           <to-do-list :lists="lists">
             <template #default="SlotProc">
               <li v-if="SlotProc.item.checked" class="job">
@@ -29,8 +32,8 @@
               </li>
             </template>
           </to-do-list>
-          <button style="background-color:green; color: black;" @click="setSelectedComponent('complete-list')">Complete List</button>
-          <button style="background-color:yellow; color: black;" @click="setSelectedComponent('todo-list')">Todo List</button>
+          <button style="background-color:white; color: black;" @click="setSelectedComponent('complete-list')">Complete List</button>
+          <button style="background-color:white; color: black;" @click="setSelectedComponent('todo-list')">Todo List</button>
         </div>
       </header>
     </ul>
@@ -141,7 +144,7 @@ header {
 
 
 #app .job {
-  background-color: yellow;
+  background-color: green;
 }
 
 #app h2 {
@@ -169,6 +172,6 @@ header {
 }
 
 #app .fail-job {
-  background-color: green;
+  background-color: yellow;
 }
 </style>
